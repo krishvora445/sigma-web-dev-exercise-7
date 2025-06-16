@@ -1,0 +1,361 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    /* Using a lighter background for clarity */
+    font-family: system-ui, sans-serif;
+}
+
+header {
+    /* The header is now the sticky container */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adds a nice subtle shadow */
+}
+
+/* This is now the main Flexbox container */
+.containr {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo and links to opposite ends */
+    align-items: center;
+    /* Vertically aligns everything in the middle */
+    padding: 1rem 2rem;
+    /* Adds some space around the navbar */
+    max-width: 1400px;
+    /* Keeps content from getting too wide on large screens */
+    margin: 0 auto;
+    /* Centers the container */
+}
+
+.logo img {
+    /* Sets a max-height for the logo so it doesn't get too big */
+    max-height: 50px;
+    display: block;
+    /* Helps prevent extra space under the image */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    /* Vertically aligns all list items */
+    list-style-type: none;
+    gap: 25px;
+    /* Space between each navigation item */
+    font-size: 1rem;
+    color: #333;
+}
+
+/* This targets the text-only list items */
+.nav-links li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+    color: #007bff;
+    /* Adds a hover effect */
+}
+
+/* This targets the images inside the list items */
+.nav-links li img {
+    display: block;
+    /* Helps with alignment */
+}
+
+main {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    height: auto;
+}
+
+.containr-1 {
+    margin-top: 70px;
+    /* border: 2px solid rgb(0, 0, 0); */
+    margin-bottom: 90px;
+    height: 200px;
+    width: 900px;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+}
+
+.box-1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.box-1 p {
+    font-size: 45px;
+    color: #333;
+    /* Using a darker color for better readability */
+    font-weight: 500;
+}
+
+.box-1 p span {
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.box-2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box-2 p {
+    font-size: 25px;
+    color: #555;
+    /* A lighter color for secondary text */
+    font-weight: 400;
+}
+
+.containr-1 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+.containr-1 .button button {
+    padding: 9px 20px;
+    /* height:  60px; */
+    font-size: 15px;
+    color: white;
+    background-color: #00B6D1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'segoe ui', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.containr-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+    margin-right: 270px;
+    /* border: 2px solid #000000; */
+}
+
+.containr-2 h3 {
+    margin-left: 30px;
+}
+
+.s-text {
+    /* display: inline-block; */
+    margin-top: 6px;
+    align-items: flex-end;
+    font-size: 12px;
+
+}
+
+.s-2 {
+    font-size: 11px;
+}
+
+.containr-3 {
+    /* border: 2px solid #333; */
+    height: 900px;
+    width: 900px;
+    margin-bottom: 50px;
+    /* display: inline-block;
+            justify-content: center;
+            align-content: center; */
+    display: grid;
+    grid-template-columns: 286px 286px 286px;
+    grid-template-rows: 210px 210px 210px 210px;
+    gap: 20px;
+
+}
+
+.containr-3 .item {
+    background-color: #F9F9F9;
+    height: 210px;
+    width: 286px;
+    /* border: 1px solid #000000; */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containr-3 .item .button button {
+    background: #5CB85C;
+    font-weight: 600;
+    font-Size: 12px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    /* align-content: center; */
+
+
+}
+
+.containr-3 .item .button button a {
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    /* Color: rgb(255, 255, 255); */
+    color: white;
+    font-Style: normal;
+    /* Ensures the link inside the button is white */
+}
+
+.containr-3 .item .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.containr-3 .item .lang {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.containr-3 .item .s-lang {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.containr-3 .item .code {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.containr-3 .item .s-code {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+footer {
+    background-color: white;
+
+}
+
+
+/* --- NEW FOOTER STYLING (ADD THIS AT THE END OF YOUR <STYLE> TAG) --- */
+
+/* Remove the old basic footer styles */
+footer {
+    background-color: #222; /* A dark background for the footer */
+    color: #ccc;
+    padding: 3rem 2rem;
+    margin-top: 50px; /* Add some space above the footer */
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Ensures sections don't get too squished before wrapping */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Underline effect for footer section titles */
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #00B6D1; /* Use the blue from your button */
+}
+
+.footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #00B6D1; /* Use the blue from your button */
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444; /* Separator line */
+    font-size: 0.85rem;
+    color: #888;
+}
